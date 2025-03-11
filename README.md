@@ -7,28 +7,35 @@ Mục tiêu của dự án là xây dựng các mô hình học sâu có khả n
 # 📂 Cấu trúc thư mục
 Dự án được tổ chức với cấu trúc thư mục như sau:
 
-├── data/                    # Thư mục chứa dữ liệu NIH Chest X-ray
+xray-diagnosis-deeplearning/
 
-├── models/                  # Thư mục chứa các mô hình đã huấn luyện
+│── models/              # Chứa mã nguồn của các mô hình
 
-├── notebooks/               # Các notebook Jupyter để thực nghiệm
+│   ├── resnet50.py      # Mô hình ResNet50
 
-│   ├── ResNet50.ipynb       # Notebook cho mô hình ResNet50
+│   ├── vgg19.py         # Mô hình VGG19
 
-│   ├── VGG19.ipynb          # Notebook cho mô hình VGG19
+│
 
-│   └── Traditional_Models.ipynb  # Notebook cho các mô hình truyền thống
-├── src/                     # Thư mục chứa mã nguồn Python
+│── data/                # Chứa dữ liệu huấn luyện
 
-│   ├── data_preprocessing.py  # Tiền xử lý dữ liệu
+│   ├── train_data.csv   # Dữ liệu huấn luyện
 
-│   ├── model_training.py    # Huấn luyện mô hình
+│   ├── val_data.csv     # Dữ liệu validation
 
-│   └── evaluation.py        # Đánh giá mô hình
+│   ├── test_data.csv    # Dữ liệu kiểm tra
 
-├── README.md                # Tệp README này
+│
 
-└── requirements.txt         # Các thư viện cần thiết để chạy dự án
+│── results/             # Chứa kết quả huấn luyện
+
+│   ├── results_resnet.npz  # Kết quả mô hình ResNet50
+
+│   ├── results_vgg.npz     # Kết quả mô hình VGG19
+
+│
+
+│── README.md            # Hướng dẫn sử dụng
 
 # 📜 Hướng dẫn sử dụng
 Cấu hình môi trường
